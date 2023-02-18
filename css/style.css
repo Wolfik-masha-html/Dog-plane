@@ -1,60 +1,74 @@
-*{
+:root {
+    --main-color: white;
+    --titles-color: black;
+    --text-color: color: rgba(21, 21, 21, 0.6);
+}
+
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-body{
-    font-family: 'Poppins',sans-serif;
+
+body {
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
+
 }
-.header{
+
+.header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding-top: 30px 0;
 }
-.container{
+
+.container {
     max-width: 1150px;
-    padding-left:20px ;
-    padding-right:20px ;
+    padding-left: 20px;
+    padding-right: 20px;
     margin: 0 auto;
-  
+
 }
 
-.header .container{
+.header .container {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
 }
 
-.navigation{
+.navigation {
     display: flex;
     flex: 1;
     justify-content: space-between;
     align-items: center;
 }
-.nav-list{
+
+.nav-list {
     display: flex;
     list-style: none;
     gap: 20px;
     align-items: center;
 }
-.header-buttons{
+
+.header-buttons {
     display: flex;
     margin-left: 95px;
     align-items: center;
 }
-.nav-link{
-   font-style: normal;
-   font-weight: 500;
-   font-size: 14px;
-   line-height: 21px;
-   text-transform: capitalize;
-   color: #181818;
-   text-decoration: none;
+
+.nav-link {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    text-transform: capitalize;
+    color: #181818;
+    text-decoration: none;
 }
-.reg-button{
+
+.reg-button {
     font-family: inherit;
     font-weight: 500;
     font-size: 14px;
@@ -66,64 +80,69 @@ body{
     margin-right: 20px;
     cursor: pointer;
 }
-.login-button{
+
+.login-button {
     font-weight: 500;
     font-size: 14px;
     line-height: 21px;
     color: #FFFFFF;
     background: #656293;
     border-radius: 5px;
-    padding:5px 22px ;
+    padding: 5px 22px;
     border: none;
     outline: none;
     cursor: pointer;
     transition: .3s;
 }
-.login-button:hover{
+
+.login-button:hover {
     background-color: #33314a;
 }
-.hero{
+
+.hero {
     background-image: url("../images/Hero-backroound.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     height: 100vh;
     padding-top: 104px;
-   
+
 }
-.hero .container{
+
+.hero .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100%;
 }
 
-h1{
+h1 {
     font-weight: 400;
-font-size: 66px;
-line-height: 77px;
-text-transform: capitalize;
-margin-bottom: 48px;
+    font-size: 66px;
+    line-height: 77px;
+    text-transform: capitalize;
+    margin-bottom: 48px;
 }
 
- h1 span{
+h1 span {
     color: #656293;
     text-transform: uppercase;
     font-weight: 700;
-  
+
 }
 
-.hero-link{
+.hero-link {
     text-decoration: none;
     font-weight: 500;
-font-size: 16px;
-line-height: 24px;
-color: #151515;
-padding-right: 26px;
-position: relative;
-width: fit-content;
+    font-size: 16px;
+    line-height: 24px;
+    color: #151515;
+    padding-right: 26px;
+    position: relative;
+    width: fit-content;
 }
-.hero-link::after{
+
+.hero-link::after {
     content: "";
     background-image: url(../images/arrow.svg);
     background-repeat: no-repeat;
@@ -138,6 +157,154 @@ width: fit-content;
     transition: .3s;
 }
 
-.hero-link:hover.hero-link::after{
-    transform: translate(5px,-50%) ;
+.hero-link:hover.hero-link::after {
+    transform: translate(5px, -50%);
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 54px;
+    text-transform: capitalize;
+    color: var[--titels-color];
+    text-align: center;
+    position: relative;
+    margin-bottom: 64px
+}
+
+h2:before {
+    content: "";
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    background-color: rgba(21, 21, 21, 0.1);
+    display: block;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.buisness-top .container,
+.buisness-bottom .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+}
+
+.buisness-top img {
+    max-width: 576px;
+}
+
+.buisness-bottom img {
+    max-width: 612px;
+    order: 2;
+}
+
+.buisness-top {
+    padding: 65px;
+    position: relative;
+}
+
+.buisness-bottom {
+    padding: 65px;
+    position: relative;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.h3 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: #151515;
+    margin-bottom: 20px;
+}
+
+p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(21, 21, 21, 0.6);
+
+    letter-spacing: 0.02em;
+}
+
+section {
+    padding-top: 115px;
+}
+
+.buisness-top :before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 405px;
+    display: block;
+    background: #E5F4F6;
+    border-radius: 0px 50px 50px 0px;
+    z-index: -1;
+}
+.buisness-bottom :before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 405px;
+    display: block;
+    background: #E5F4F6;
+    border-radius: 50px 0px 0px 50px;
+    z-index: -1;
+}
+
+.srvices-item img{
+margin: 0 auto 13px auto;
+}
+
+.services-item h3 {
+    font-weight: 500;
+    font-size:18px ;
+    line-height: 27px;
+    color: #151515;
+    margin-bottom: 13px;
+}
+
+.planes-list{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+.planes-item{
+    width: calc(100% - 90px)/4px;
+    background: var(--main-color);
+    box-shadow: 0px 30px 84px rgba(19, 10, 46, 0.08), 0px 8px 32px rgba(19, 10, 46, 0.07), 0px 3px 14px rgba(19, 10, 46, 0.03), 0px 1px 3px rgba(19, 10, 46, 0.13);
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.imgwrapper{
+margin-bottom: 14px;
+border-radius: 12px;
+overflow: hidden;
+}
+
+.planes-image{
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.planes-text{
+    font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+color: #151515;
 }
