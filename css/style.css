@@ -366,7 +366,6 @@ section {
     display: flex;
     gap: 24px;
 }
-
 .membership-item {
     flex-basis: calc((100% - 48px) / 3);
     padding: 24px;
@@ -375,6 +374,12 @@ section {
 
 .membership-item:nth-child(2) {
     background: #656293;
+    transform: translateY(-30px);
+}
+
+.membership-item:nth-child(2) button {
+    background-color: white;
+    color: #151515;
 }
 
 .membership-item:first-child {
@@ -385,6 +390,11 @@ section {
     border-radius: 0px 20px 20px 0px;
 
 }
+
+.membership-item:nth-child(2) .price {
+    color:white ;
+}
+
 
 .membership-item h3 {
     font-weight: 700;
@@ -445,12 +455,13 @@ section {
 
 .price{
     padding-top: 70px;
+    color: #161616;
 }
 
 .number{font-weight: 700;
     font-size: 32px;
     line-height: 40px;
-    color: #FFFFFF;
+   
 }
 
 .adventeges-button{
@@ -458,4 +469,21 @@ section {
     background: #656293;
     padding: 12px 16px;
     width: 100%;
+    color: white;
+    margin-top: 24px;
+    border: 0;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.membership-item:nth-child(2) .advantage-item.tick:before{
+    background-image: url(/images/white-tich.svg);
+}
+.membership-item:nth-child(2) .advantage-item.cross:before{
+    background-image: url(/images/white-cross.png);
+}
+
+
+.footer-image{
+    margin: 0 auto;
 }
