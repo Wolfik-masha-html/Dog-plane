@@ -24,7 +24,15 @@ ul {
     top: 0;
     left: 0;
     width: 100%;
-    padding-top: 30px 0;
+    padding: 30px 0;
+    background-color: white;
+    z-index: 10;
+}
+
+@media screen and (max-width:1024) {
+    .nav-list{
+        display: none;
+    }
 }
 
 .container {
@@ -59,6 +67,13 @@ ul {
     display: flex;
     margin-left: 95px;
     align-items: center;
+}
+
+@media screen and (max-width:767px){
+    .header-buttons{
+        display: none;
+    }
+
 }
 
 .nav-link {
@@ -239,7 +254,7 @@ p {
 }
 
 section {
-    padding-top: 115px;
+    padding-bottom: 115px;
 }
 
 .buisness-top :before {
@@ -323,6 +338,7 @@ section {
 
 .planes {
     position: relative;
+    overflow: hidden;
 }
 
 .serveces-list {
@@ -464,6 +480,7 @@ section {
    
 }
 
+
 .adventeges-button{
     border-radius: 12px;
     background: #656293;
@@ -477,13 +494,73 @@ section {
 }
 
 .membership-item:nth-child(2) .advantage-item.tick:before{
-    background-image: url(/images/white-tich.svg);
+    background-image: url(../images/white-tich.svg);
 }
 .membership-item:nth-child(2) .advantage-item.cross:before{
-    background-image: url(/images/white-cross.png);
+    background-image: url(../images/white-cross.png);
 }
-
+.membership-item:nth-child(2) h3{
+    color: white;
+}
 
 .footer-image{
     margin: 0 auto;
 }
+
+
+
+.footer-bottom {
+    background: #656293;
+}
+
+.footer-logo {
+    padding-top: 50px;
+    padding-bottom:30px;
+ justify-content: center;
+ display: flex;
+}
+
+.footer-logo a {
+    display: block;
+    height: fit-content;
+}
+
+.footer-info{
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 17px;
+    padding-bottom: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-info nav{
+    flex: 1;
+}
+
+.footer-navigation{
+display: flex;
+gap: 30px;
+list-style: none;
+}
+
+
+.footer-link{
+    text-decoration: none;
+    font-weight: 400;
+font-size: 14px;
+line-height: 21px;
+color: rgba(255, 255, 255, 0.7);
+
+}
+
+.copyrigth{
+    font-weight: 400;
+font-size: 14px;
+line-height: 21px;
+color: rgba(255, 255, 255, 0.7);
+
+}
+
+
+
