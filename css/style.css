@@ -325,7 +325,13 @@ h2:before {
     padding: 65px 0;
     position: relative;
 }
+@media screen and (max-width:480px){
 
+    .buisness-top img, .buisness-bottom  img{
+      max-width: 400px;
+    }
+   }
+   
 img {
     display: block;
     max-width: 100%;
@@ -388,6 +394,15 @@ section {
         top: 250px;
     }
 }
+@media screen and (max-width:480px) {
+    .buisness-bottom::before,
+    .buisness-top::before {
+        display: none;
+    }
+}
+.bussisness{
+    padding-top: 40px;
+}
 .srvices-item img {
     margin: 0 auto 13px auto;
 }
@@ -412,25 +427,35 @@ section {
        gap:30px;
     }
    }
+   .serveces-item {
+    width: calc((100% - 370px) / 2);
+    padding: 40px 52px 51px 52px;
+    box-shadow: 0px 30px 84px rgba(19, 10, 46, 0.08), 0px 8px 32px rgba(19, 10, 46, 0.07), 0px 3px 14px rgba(19, 10, 46, 0.03), 0px 1px 3px rgba(19, 10, 46, 0.13);
+    border-radius: 12px;
+    text-align: center;
+}
+ 
+   @media screen and (max-width:480px){
 
-
-
-   @media screen and (max-width:768px){
-
-    .membership-list{
-       flex-direction: column;
+    .serveces-list{
+       justify-content: space-between;
        gap:20px;
-       
     }
    }
-
    @media screen and (max-width:768px){
 
-    .membership-item{
-      width:100%;
+    .serveces-item{
+       width:47%;
+    }
+   }
+    @media screen and (max-width:480px){
+
+    .serveces-item{
+       width:100%;
     }
    }
 
+ 
 .planes-item {
     width: calc((100% - 90px)/4px);
     background: var(--main-color);
@@ -449,6 +474,12 @@ section {
     .membership-item{
       width:100%;
       transform: translateY(0);
+    }
+   }
+   @media screen and (max-width:480px){
+
+    .serveces-image{
+     display: none;
     }
    }
 .imgwrapper {
@@ -485,19 +516,8 @@ section {
 
 
 
-.serveces-item {
-    width: calc((100% - 370px) / 2);
-    padding: 40px 52px 51px 52px;
-    box-shadow: 0px 30px 84px rgba(19, 10, 46, 0.08), 0px 8px 32px rgba(19, 10, 46, 0.07), 0px 3px 14px rgba(19, 10, 46, 0.03), 0px 1px 3px rgba(19, 10, 46, 0.13);
-    border-radius: 12px;
-    text-align: center;
-}
-@media screen and (max-width:768px){
 
-    .serveces-item{
-       width: 47%;
-    }
-   }
+
 
 
 .serveces-image {
@@ -562,6 +582,26 @@ section {
     line-height: 40px;
     margin-bottom: 32px;
 }
+@media screen and (max-width:768px){
+
+    .membership-list{
+       flex-direction: column;
+       gap:20px;
+       
+    }
+    .membership-list .membership-item {
+        width: 100%;
+        transform: translateY(0);
+        border-radius: 20px;
+    }
+   }
+
+   @media screen and (max-width:768px){
+
+    .membership-item{
+      width:100%;
+    }
+   }
 
 .membership-adventeges {
     font-weight: 400;
