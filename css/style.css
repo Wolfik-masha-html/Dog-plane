@@ -31,8 +31,8 @@ ul {
 }
 
 
-@media screen and (max-width:1024) {
-    menu-bth {
+@media screen and (max-width:1024px) {
+    .menu-btn {
         background-color: transparent;
         border: none;
         outline: none;
@@ -43,13 +43,14 @@ ul {
         z-index: 2;
         overflow: hidden;
         margin-left: 20px;
+        
     }
 
 
 
 }
 
-.menu-bth .bar {
+.menu-btn .bar {
     width: 30px;
     height: 4px;
     position: absolute;
@@ -60,24 +61,24 @@ ul {
     transition: 0.3s;
 }
 
-.menu-bth .bar :nth-child(2) {
-    top: calc(50%-9px)
+.menu-btn .bar:nth-child(2) {
+    top: calc(50% - 9px)
 }
 
-.menu-bth .bar :nth-child(3) {
-    top: calc(50%+9px)
+.menu-btn .bar:nth-child(3) {
+    top: calc(50% + 9px)
 }
 
-.menu-bth :active.bar :nth-child(1) {
+.menu-btn.active .bar:nth-child(1) {
     display: none;
 }
 
-.menu-bth :active.bar :nth-child(2) {
+.menu-btn.active .bar:nth-child(2) {
     top: 50%;
     transform: translate(-50%, 0%) rotate(46deg);
 }
 
-.menu-bth :active.bar :nth-child(3) {
+.menu-btn.active .bar:nth-child(3) {
     top: 50%;
     transform: translate(-50%, 0%) rotate(-46deg);
 }
@@ -140,6 +141,23 @@ ul {
     list-style: none;
     gap: 20px;
     align-items: center;
+}
+@media screen and (max-width:1024px) {
+    .nav-list {
+        position:fixed ;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        padding: 15px;background-color:white ;
+        transition: 0.05s;
+        transform: translateX(100%);
+        flex-direction: column;
+        align-items: center;
+    }
+  .nav-list.active{
+    transform: translateX(0);
+  }
 }
 
 .header-buttons {
@@ -205,7 +223,12 @@ ul {
     padding-top: 104px;
 
 }
+@media screen and (max-width:480px){
 
+    .hero{
+      padding: 72px 0px;
+    }
+   }
 .hero .container {
     display: flex;
     flex-direction: column;
@@ -220,6 +243,13 @@ h1 {
     text-transform: capitalize;
     margin-bottom: 48px;
 }
+@media screen and (max-width:480px){
+
+    h1{
+      font-size: 32px;
+      line-height: 40px;
+    }
+   }
 .serveces-list{
     display: flex;
     flex-wrap: wrap;
@@ -284,7 +314,14 @@ h2 {
     position: relative;
     margin-bottom: 64px
 }
+@media screen and (max-width:480px){
 
+    h2{
+      margin-bottom: 32px;
+      font-size: 24px;
+      line-height:28px ;
+    }
+   }
 h2:before {
     content: "";
     height: 40px;
@@ -298,7 +335,13 @@ h2:before {
     transform: translate(-50%, -50%);
     z-index: -1;
 }
+@media screen and (max-width:480px){
 
+    h2 ::before{
+     width: 28px;
+     height: 28px;
+    }
+   }
 .buisness-top .container,
 .buisness-bottom .container {
     display: flex;
@@ -308,11 +351,11 @@ h2:before {
 }
 
 .buisness-top img {
-    max-width: 576px;
+    width: 576px;
 }
 
 .buisness-bottom img {
-    max-width: 612px;
+    width: 612px;
     order: 2;
 }
 
@@ -328,7 +371,7 @@ h2:before {
 @media screen and (max-width:480px){
 
     .buisness-top img, .buisness-bottom  img{
-      max-width: 400px;
+      width: 400px;
     }
    }
    
@@ -358,7 +401,12 @@ p {
 section {
     padding-bottom: 115px;
 }
+@media screen and (max-width:480px){
 
+    section{
+      padding-bottom: 72px;
+    }
+   }
 .buisness-top::before {
     content: "";
     position: absolute;
@@ -516,7 +564,21 @@ section {
 
 
 
+@media screen and (max-width:480px){
 
+    .planes-item{
+       width: 100%;
+       max-width: 360px;
+       
+    }
+   }
+   @media screen and (max-width:480px){
+
+    .planes-list{
+        align-items: centerf;
+       flex-direction: column;
+    }
+   }
 
 
 
@@ -692,6 +754,7 @@ section {
 
 .footer-image {
     margin: 0 auto;
+    padding: 0px  16px;
 }
 
 
@@ -730,7 +793,13 @@ section {
     gap: 30px;
     list-style: none;
 }
+@media screen and (max-width:480px){
 
+    .footer-navigation{
+     flex-wrap: wrap;
+     justify-content: center;
+    }
+   }
 
 .footer-link {
     text-decoration: none;
@@ -740,6 +809,13 @@ section {
     color: rgba(255, 255, 255, 0.7);
 
 }
+@media screen and (max-width:768px){
+
+    .footer-info{
+      flex-direction: column;
+      gap :20px;
+    }
+   }
 
 .copyrigth {
     font-weight: 400;
